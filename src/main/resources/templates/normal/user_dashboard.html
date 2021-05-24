@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Dashboard</title>
+</head>
+<body>
+<section>
+	
+	
+	<div class="container">
+	
+		<div class="card text-center">
+			<div class="card-header">
+					<h1 class="font-italic" >Welcome <span th:text="${session.user.name}"></span></h1>
+			</div>
+			<div class="card-body">
+			
+				<h3 class="font-italic" >Start By Adding Contacts</h3>
+			
+			</div>
+			<div class="card-footer">
+				<a href="#" th:href="@{/user/add-contact}" class="btn bg-primary text-white" > Add Contact</a>
+			</div>
+		
+		</div>
+	
+	</div>
+	
+	<script>
+	
+		$(document).ready( function(){
+			$(".item").removeClass("active");
+			$("#home-link").addClass("active");
+		});
+	
+	</script>
+	
+</section>
+</body>
+</html>
